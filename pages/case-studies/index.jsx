@@ -5,7 +5,7 @@ import colors 		from '../../content/case-studies/_colors.json'
 import settings 	from '../../content/_settings.json'
 
 //
-export default function CaseStudies({}) {
+export default function Documentation({}) {
 	return (
 		<>	
 			<Color colors={colors} />
