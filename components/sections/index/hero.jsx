@@ -65,11 +65,11 @@ export default function Hero() {
 				</section>
 				<section>
 					<button	className={`button ${button.primary}`}
-							onClick={ () => window.location = 'mailto:hello@andrewnelson.net' } >
+							onClick={ () => window.location = '/staking' } >
 						{content.buttons.primary.title}
 					</button>
 					<button className={`button ${button.secondary} leaveSite`}
-							onClick={ ()=> window.open("/documentation", "_blank") } >
+							onClick={ ()=> window.open("https://solana.com/docs/economics/staking", "_blank") } >
 						{content.buttons.secondary.title}
 					</button>
 				</section>

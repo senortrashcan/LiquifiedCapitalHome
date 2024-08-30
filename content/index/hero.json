@@ -20,7 +20,7 @@
 	"buttons": {
 		"primary": {
 			"title": "Dapp",
-			"url": "/staking",
+			"url": "",
 			"leaveSite": false
 		},
 		"secondary": {
