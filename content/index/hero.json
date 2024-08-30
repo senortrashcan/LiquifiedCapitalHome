@@ -1,21 +1,21 @@
 {
 	"intro": {
-		"start": "const Andrew = ( name, passion ) =>",
-		"end": "Hello, my name is",
+		"start": "On-Chain Governance",
+		"end": "On-Chain Earnings",
 		"speed": 60,
 		"deletionSpeed": 80,
 		"wrapper": "h2",
 		"startDelay": 1000,
 		"deleteDelay": 3000,
-		"restartDelay": 12000
+		"restartDelay": 7000
 	},
 
 	"header": {
-		"name": "hello there",
-		"usp": "I design and build meaningful experiences."
+		"name": "Hello There",
+		"usp": "Welcome to Liquified Capital, where innovation meets opportunity."
 	},
 
-	"paragraph": "I am a digital polymath — a constantly evolving digital creator driven by a passion for lifelong learning and the desire to leave a lasting impact.",
+	"paragraph": "Unlock the future of finance with Liquified Capital: earn rewards while securing the network and joining the next wave of digital innovation!",
 
 	"buttons": {
 		"primary": {
