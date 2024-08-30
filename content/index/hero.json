@@ -12,19 +12,19 @@
 
 	"header": {
 		"name": "Hello There",
-		"usp": "Welcome to Liquified Capital, where innovation meets opportunity."
+		"usp": "Welcome to where innovation meets opportunity."
 	},
 
 	"paragraph": "Unlock the future of finance with Liquified Capital: earn rewards while securing the network and joining the next wave of digital innovation!",
 
 	"buttons": {
 		"primary": {
-			"title": "Contact Me",
-			"url": "",
+			"title": "Dapp",
+			"url": "/staking",
 			"leaveSite": false
 		},
 		"secondary": {
-			"title": "LinkedIn",
+			"title": "Docs",
 			"url": "",
 			"leaveSite": "true"
 		}
