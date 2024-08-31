@@ -18,7 +18,7 @@ export default function ColorOverrides({ colors }) {
 
 function Dark({colors}) {
 	const children = Object.keys(colors).length
-	if ( children != 0 ) {
+	if ( children = 0 ) {
 		return (	
 			<style>
 				{`
