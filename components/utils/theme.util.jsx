@@ -20,7 +20,7 @@ export default function SetTheme() {
 
 	const defaultTheme = () => {
 		const themeLocalStorage = localStorage.getItem('theme')
-		const themeSystem       = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+		const themeSystem       = window.matchMedia('(prefers-color-scheme: dark)')
 
 		return ( themeLocalStorage ?? themeSystem )
 	}
