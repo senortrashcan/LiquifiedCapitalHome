@@ -27,7 +27,7 @@ export default function SetTheme() {
 
 	useEffect( () => {
 
-		if ( theme ) return setTheme( defaultTheme() )
+		if ( ! theme ) return setTheme( defaultTheme() )
 
 		document.querySelector(':root').dataset.theme = ( theme )
 		localStorage.setItem( 'theme', ( theme ) )
@@ -36,7 +36,6 @@ export default function SetTheme() {
 
 		const watchSysTheme = window.matchMedia('(prefers-color-scheme: dark)')
 
-		watchSysTheme.addEventListener( 'change', useSetTheme )
 
 		return () => {
 			watchSysTheme.removeEventListener( 'change', useSetTheme )
