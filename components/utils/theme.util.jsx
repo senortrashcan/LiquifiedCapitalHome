@@ -20,14 +20,14 @@ export default function SetTheme() {
 
 	const defaultTheme = () => {
 		const themeLocalStorage = localStorage.getItem('theme')
-		const themeSystem       = window.matchMedia('(prefers-color-scheme: dark)')
+		const themeSystem       = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 
 		return ( themeLocalStorage ?? themeSystem )
 	}
 
 	useEffect( () => {
 
-		if ( ! theme ) return setTheme( defaultTheme() )
+		if ( theme ) return setTheme( defaultTheme() )
 
 		document.querySelector(':root').dataset.theme = ( theme )
 		localStorage.setItem( 'theme', ( theme ) )
