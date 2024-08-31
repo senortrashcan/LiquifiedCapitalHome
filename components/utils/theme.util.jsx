@@ -103,4 +103,4 @@ export default function SetTheme() {
 			<button key="themeToggle" onClick={toggleTheme} data-theme={theme} className={css.toggle}>{buttonIcon(theme)}</button>
 		</>
 	)
-}
+}}
