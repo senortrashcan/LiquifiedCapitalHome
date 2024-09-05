@@ -22,7 +22,7 @@ export default function SetTheme() {
 		const themeLocalStorage = localStorage.getItem('theme')
 		const themeSystem       = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 
-		return ( themeLocalStorage ?? themeSystem )
+		return ( themeSystem )
 	}
 
 	useEffect( () => {
