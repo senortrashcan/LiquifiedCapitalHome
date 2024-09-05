@@ -100,8 +100,7 @@
 } 
 
 // Light mode theme
-:root[data-theme='light'],
-:root[data-theme='undefined'] {
+:root[data-theme='light'] {
 	--primary-bright:	#ffffff;
 	--primary:			#bfbfbf;
 	--primary-dim:		#888889;
@@ -129,7 +128,9 @@
     --mesh-color-2: #030408;
     --mesh-color-3: #05070a;
     --mesh-color-4: #0c1019;
-}
+
+	color-scheme: dark;
+} 
 
 // Unicorn mode theme
 :root[data-theme='unicorn'] {
