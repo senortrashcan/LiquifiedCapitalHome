@@ -4,11 +4,11 @@
 		"title": "Home"
 	},
 	{
-		"url": "/projects",
-		"title": "Staking"
+		"url": "/stake",
+		"title": "Stake"
 	},
 	{
-		"url": "/comingsoon",
+		"url": "/documentation",
 		"title": "Documentation"
 	}
 ]
