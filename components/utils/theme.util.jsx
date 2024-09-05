@@ -13,8 +13,8 @@ export default function SetTheme() {
 	const [ theme, setTheme ] = useState()
 
 	const toggleTheme = () => {
-		if ( theme == 'dark') {
-			setTheme('light')
+		if ( theme == 'light') {
+			setTheme('dark')
 		}
 	}
 
@@ -22,7 +22,7 @@ export default function SetTheme() {
 		const themeLocalStorage = localStorage.getItem('theme')
 		const themeSystem       = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 
-		return ( themeSystem )
+		return ( themeLocalStorage )
 	}
 
 	useEffect( () => {
