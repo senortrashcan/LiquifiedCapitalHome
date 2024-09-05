@@ -1,4 +1,4 @@
-import FeaturedProject from '../../blocks/projects/featured'
+import FeaturedProject from '../../blocks/stake/featured'
 
 
 // Section structure
@@ -8,8 +8,8 @@ import Badges 		from '../../utils/badge.list.util'
 import Icon 		from '../../utils/icon.util'
 import SectionTitle from '../../blocks/section.title.block'
 
-import css 			from '../../../styles/sections/projects/featured.module.scss'
-import content 		from '../../../content/projects/featured.json'
+import css 			from '../../../styles/sections/stake/featured.module.scss'
+import content 		from '../../../content/stake/featured.json'
 
 export default function FeaturedProjects() {
 
