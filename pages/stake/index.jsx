@@ -1,11 +1,11 @@
 // Sections
-import GitRecentProjects from '../../components/sections/projects/recent'
-import FeaturedProjects from '../../components/sections/projects/featured'
+import GitRecentProjects from '../../components/sections/stake/recent'
+import FeaturedProjects from '../../components/sections/stake/featured'
 
 import Color  from '../../components/utils/page.colors.util'
 
 import settings from '../../content/_settings.json'
-import colors from '../../content/projects/_colors.json'
+import colors from '../../content/stake/_colors.json'
 
 //
 export default function Projects({ user, repos }) {
