@@ -48,9 +48,9 @@ export default function FeaturedProject({ content }, index) {
 						<Badges list={stack} block="stack" fullContainer={false} color={false} />
 					</div>
 					<m.div variants={''} className={css.viewProject}>
-					<a href="https://www.minecraft.com" target="_blank" rel="noopener noreferrer">
-            			<Icon icon="fad:arrow-right-to-bracket" />
-          			</a>
+						<a href="https://www.minecraft.com" target="_blank" rel="noopener noreferrer">
+							<Icon icon={[ 'fad', 'arrow-right-to-bracket' ]} />
+						</a>
 					</m.div>
 				</div>
 			</div>
