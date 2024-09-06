@@ -38,8 +38,7 @@ export default function FeaturedProject({ content }, index) {
 			
 			<div className={css.details}>
 				<div className={css.projectHeader}>
-					<div className={css.header}>
-						<h3 className="highlight">{project}</h3><span className={css.privateOr}><i className="devicon-github-plain"></i>{repo}</span>	
+					<div className={css.header}>	
 					</div>
 					<div className={css.description}>
 						<p><strong>{descriptionTitle}</strong> {description}</p>
@@ -49,7 +48,6 @@ export default function FeaturedProject({ content }, index) {
 					</div>
 					<m.div variants={''} className={css.viewProject}>
 						<Icon icon={[ 'fad', 'arrow-right-to-bracket' ]} />
-						<Link href={url}></Link>
 					</m.div>
 				</div>
 			</div>
