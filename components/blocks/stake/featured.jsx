@@ -48,7 +48,9 @@ export default function FeaturedProject({ content }, index) {
 						<Badges list={stack} block="stack" fullContainer={false} color={false} />
 					</div>
 					<m.div variants={''} className={css.viewProject}>
-						<Icon icon={[ 'fad', 'arrow-right-to-bracket' ]} />
+						<Link to='www.minecraft.com'>
+							<Icon icon={[ 'fad', 'arrow-right-to-bracket' ]} />
+						</Link>
 					</m.div>
 				</div>
 			</div>
