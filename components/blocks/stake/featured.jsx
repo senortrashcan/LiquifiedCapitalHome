@@ -38,7 +38,8 @@ export default function FeaturedProject({ content }, index) {
 			
 			<div className={css.details}>
 				<div className={css.projectHeader}>
-					<div className={css.header}>	
+					<div className={css.header}>
+						<h3 className="highlight">{project}</h3>	
 					</div>
 					<div className={css.description}>
 						<p><strong>{descriptionTitle}</strong> {description}</p>
