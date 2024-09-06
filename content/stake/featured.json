@@ -12,9 +12,11 @@
 			{ "key": "mock-stack",	"hover": "left",	"h": "1200", "w": "556", "url": "/img/msc-mock_stack/01.png" }
 		],
 		"stack": [
-			{"name": "SOL", 			"type": "devicon" },
-			{"name": "Decentralized", 		"type": "devicon" },
-			{"name": "Governance", 	"type": "devicon" }
+			{"name": "SOL"},
+			{"name": "Decentralized"},
+			{"name": "Scalable"},
+			{"name": "Efficient"},
+			{"name": "Low Fees"}
 		]
 	}
 ]
