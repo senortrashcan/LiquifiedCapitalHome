@@ -49,6 +49,7 @@ export default function FeaturedProject({ content }, index) {
 					</div>
 					<m.div variants={''} className={css.viewProject}>
 						<Icon icon={[ 'fad', 'arrow-right-to-bracket' ]} />
+						<Link href={"www.minecraft.com"}></Link>
 					</m.div>
 				</div>
 			</div>
