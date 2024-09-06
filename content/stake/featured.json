@@ -2,7 +2,6 @@
 	{
 		"project": "Solana Staking",
 		"url": "www.liquified.capital",
-		"repo": "Private",
 		"descriptionTitle": "Your Gateway to Effortless SOL Staking.",
 		"description": "We offer a seamless, user-friendly experience designed for both seasoned investors and newcomers alike.",
 		"imageOptions": [
@@ -13,17 +12,9 @@
 			{ "key": "mock-stack",	"hover": "left",	"h": "1200", "w": "556", "url": "/img/msc-mock_stack/01.png" }
 		],
 		"stack": [
-			{ "key": "SOL", 		"name": "SOL", 			"type": "devicon" },
-			{ "key": "mysql", 		"name": "mySQL", 		"type": "devicon" },
-			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
-			{ "key": "jquery", 		"name": "jQuery", 		"type": "devicon" },
-			{ "key": "woocommerce", "name": "WooCommerce", 	"type": "devicon" },
-			{ "key": "wordpress",	"name": "Wordpress", 	"type": "devicon" },
-			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
-			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
-			{ "key": "sass",		"name": "SCSS", 		"type": "devicon" },
-			{ "key": "git",			"name": "Git(Hub)", 	"type": "devicon" },
-			{ "key": "google",		"name": "GA4/GTM/EEC", 	"type": "devicon" }
+			{ "key": "planet-moon", "name": "SOL", 			"type": "devicon" },
+			{ "key": "solar-system","name": "Decentralized", 		"type": "devicon" },
+			{ "key": "cubes", 	"name": "Governance", 	"type": "devicon" }
 		]
 	}
 ]
