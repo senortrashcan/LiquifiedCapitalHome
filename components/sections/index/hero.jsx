@@ -64,12 +64,12 @@ export default function Hero() {
 					</p>					
 				</section>
 				<section>
-					<button	className={`button ${button.primary}`}
-							onClick={ () => window.location = '/stake' } >
+					<button	className={`button ${button.primary} leaveSite`}
+							onClick={ () => window.open("https://liquified.capital", "_blank") } >
 						{content.buttons.primary.title}
 					</button>
 					<button className={`button ${button.secondary}`}
-							onClick={ ()=> window.open("/documentation", "_blank") } >
+							onClick={ ()=> window.location = '/documentation' } >
 						{content.buttons.secondary.title}
 					</button>
 				</section>
