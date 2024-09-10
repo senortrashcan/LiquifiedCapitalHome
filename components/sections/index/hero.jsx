@@ -68,7 +68,7 @@ export default function Hero() {
 							onClick={ () => window.location = '/stake' } >
 						{content.buttons.primary.title}
 					</button>
-					<button className={`button ${button.secondary} leaveSite`}
+					<button className={`button ${button.secondary}`}
 							onClick={ ()=> window.open("/documentation", "_blank") } >
 						{content.buttons.secondary.title}
 					</button>
