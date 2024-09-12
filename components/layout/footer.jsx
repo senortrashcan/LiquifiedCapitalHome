@@ -72,7 +72,7 @@ export default function Footer() {
 					</ul>
 				</section>
 				<section className={css.github}>
-					<a href={settings.portfolio.repo_html} rel="noreferrer" target="_blank">
+					<a>
 						<h5>{settings.portfolio.forkthis}</h5>
 					</a>
 				</section>
