@@ -39,20 +39,20 @@ export default function About() {
 					</div>
 					<div className={about.copy} >
 						<CopyBlock 
-							title="Softskills that pay the bills"
+							title="We Facilitate Staking"
 							containerClass={about.container}
 							iconClass={about.icon}
 							icon={[ 'fat', 'ear-listen' ]}
-							copy="In addition to my design and technical expertise—I also have strong leadership, time management, and multitasking skills—honed through my experience as a business owner / managing partner, husband, and father of two. Outside of work, I enjoy staying active through sports such as hockey and snowboarding. I am confident in my ability to bring passion and value to any project."
+							copy="We enable you to participate in staking by managing the technical complexities for you. You can easily stake your cryptocurrency through our platform, contributing to the network and earning rewards without the need to operate your own nodes."
 						/>
 						<BadgesBlock 
-							title="Reasearch and planning" 
+							title="We Ensure Security and Reliability" 
 							containerClass={about.container}
 							list={methods} 
 							fullContainer="fullContainer"
 							block="methods" 
 							icon="fingerprint"
-							copy="One of my favorite aspects of creating is planning the architecture of a project. From Design Systems to Brand Strategy—I enjoy working with the many touch points of user experience."
+							copy="Your security is our top priority. We employ advanced security measures, including encryption and multi-signature wallets, to protect your assets and data from potential threats."
 							//invertedColor="invertedColor"
 							headerIcon={`${about.icon}`}
 						/>
