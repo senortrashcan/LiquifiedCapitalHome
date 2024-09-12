@@ -28,22 +28,22 @@ export default function Technical() {
 		<Section classProp={`${about.section} borderBottom`}>	
 			<Container spacing={['verticalXXXLrg']}>
 				<SectionTitle
-					title="Technical"
-					preTitle="Hardskills"
-					subTitle="As a creative technologist, I craft intuitive digital experiences using a diverse set of tools and languages."
+					title="Our Vision"
+					preTitle="Future"
+					subTitle="At Liquified Capital, we envision a world where decentralized finance is accessible to everyone, and where technology bridges the gap between traditional finance and the future of digital assets. We’re committed to advancing this vision by continuously innovating and enhancing our platform to meet the evolving needs of our users."
 				/>
 				<section className={`${about.content} ${about.container}`}>
 					<div className={about.copy}>
 						<CopyBlock 
-							title="Polymath foundations"
+							title="Commitment to Decentralization"
 							icon={[ 'fat', 'chart-network' ]}
-							copy="With a strong foundation in both design and development, I bring a unique perspective to every project and am constantly learning and evolving to stay up-to-date with the latest industry trends."
+							copy="Our platform is built to support leading decentralized staking protocols, allowing you to retain full control over your assets while participating in the staking ecosystem."
 							iconClass={about.icon}
 							containerClass={about.container}
 						/>
 						<BadgesBlock 
-							title="Software I love to work with" 
-							copy="With over 20 years of experience creating digital assets, I have a deep and intuitive understanding of how the interfaces of the best software products in the world are designed. This is just some of the software I have used over that time."
+							title="User-Friendly Experience" 
+							copy="Our platform is designed with simplicity in mind, making it easy for both newcomers and experienced users to navigate and manage their staking activities."
 							list={software}
 							block="software" 
 							fullContainer="fullContainer"
@@ -52,8 +52,8 @@ export default function Technical() {
 							headerIcon={about.icon} 
 						/>
 						<BadgesBlock 
-							title="Technologies I love to build with" 
-							copy="I deeply enjoy solving problems through code. From the front end all the way to the back end and the APIs in-between. No project is too challenging for me."
+							title="Clear Transparency" 
+							copy="We value open communication and provide straightforward information about our processes, performance, and fees, helping you make informed decisions."
 							list={tech} 
 							block="tech"
 							fullContainer="fullContainer" 

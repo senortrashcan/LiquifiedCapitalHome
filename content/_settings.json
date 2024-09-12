@@ -3,13 +3,13 @@
 	"logo": "",
 	
 	"username": {
-		"github": "atlamors",
-		"medium": "@--andrewnelson"
+		"github": "",
+		"medium": ""
 	},
 
 	"portfolio": { 
-		"forkthis": "Steal this theme! Its open-source 🥰",
-		"repo_html": "https://www.github.com/atlamors/portfolio",
-		"repo_api": "https://api.github.com/repos/atlamors/portfolio"
+		"forkthis": "© Copyright 2024 LiquifiedCapital.com. All rights reserved.",
+		"repo_html": "",
+		"repo_api": ""
 	}
 }
