@@ -28,13 +28,13 @@ export default function About() {
 		<Section classProp={about.section}>	
 			<Container spacing={['verticalXXXLrg']}>
 				<SectionTitle
-					title="About Us"
+					title="What We Do"
 					preTitle="Synopsis"
-					subTitle="With a diverse skill set that includes UX design, UI design, full stack development, operational architecture, systems design, photography, and branding, I am a well-rounded digital professional."
+					subTitle="Decentralized staking is more than just a buzzword, it’s the backbone of a more democratic and resilient financial system. We offer a robust platform that simplifies the staking process, ensuring you can easily participate in staking networks and earn rewards without compromising on security or ease of use."
 				/>
 				<section className={about.content}>
 					<div className={about.image}>
-						<img src="/img/family-photo.jpg" alt="Nelson family photo"/>
+						<img src="/img/family-photo.jpg" alt="cat"/>
 						{/* <Image src="/img/family-photo.jpg" width={600} height={800}/> */}
 					</div>
 					<div className={about.copy} >
