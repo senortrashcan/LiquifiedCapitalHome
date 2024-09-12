@@ -64,10 +64,10 @@ export default function About() {
 }
 
 const methods 	= [
-	{ key: 'planet-moon', 		name: 'User Friendly', 		type: 'fad' },
-	{ key: 'qrcode', 			name: 'Secure', 	type: 'fad' },
-	{ key: 'window', 			name: 'Transparent', 	type: 'fad' },
-	{ key: 'cubes', 			name: 'Accessible', 	type: 'far' },
-	{ key: 'layer-plus', 		name: 'Effortless', 	type: 'fad' },
-	{ key: 'solar-system', 		name: 'Decentralized', 		type: 'fad' },
+	{ key: 'user', 				name: 'User Friendly', 		type: 'fad' },
+	{ key: 'lock', 				name: 'Secure', 			type: 'fad' },
+	{ key: 'magnifying-glass', 	name: 'Transparent', 	type: 'fad' },
+	{ key: 'claptop-mobile', 	name: 'Accessible', 	type: 'fad' },
+	{ key: 'thumbs-up', 		name: 'Effortless', 	type: 'fad' },
+	{ key: 'network-wired', 	name: 'Decentralized', 		type: 'fad' },
 ]
