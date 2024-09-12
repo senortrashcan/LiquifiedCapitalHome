@@ -65,9 +65,9 @@ export default function About() {
 
 const methods 	= [
 	{ key: 'user', 				name: 'User Friendly', 		type: 'fad' },
-	{ key: 'lock', 				name: 'Secure', 			type: 'fad' },
+	{ key: 'shield-check', 		name: 'Secure', 			type: 'fad' },
 	{ key: 'magnifying-glass', 	name: 'Transparent', 	type: 'fad' },
-	{ key: 'claptop-mobile', 	name: 'Accessible', 	type: 'fad' },
+	{ key: 'laptop-mobile', 	name: 'Accessible', 	type: 'fad' },
 	{ key: 'thumbs-up', 		name: 'Effortless', 	type: 'fad' },
 	{ key: 'network-wired', 	name: 'Decentralized', 		type: 'fad' },
 ]
