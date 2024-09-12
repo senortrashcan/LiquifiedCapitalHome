@@ -44,18 +44,18 @@ export default function Technical() {
 						<BadgesBlock 
 							title="User-Friendly Experience" 
 							copy="Our platform is designed with simplicity in mind, making it easy for both newcomers and experienced users to navigate and manage their staking activities."
-							list={software}
-							block="software" 
+							list={experience}
+							block="experience" 
 							fullContainer="fullContainer"
-							icon="grid-2-plus"
+							icon="people"
 							containerClass={about.container}
 							headerIcon={about.icon} 
 						/>
 						<BadgesBlock 
 							title="Clear Transparency" 
 							copy="We value open communication and provide straightforward information about our processes, performance, and fees, helping you make informed decisions."
-							list={tech} 
-							block="tech"
+							list={transparency} 
+							block="transparency"
 							fullContainer="fullContainer" 
 							icon="laptop-code"
 							containerClass={about.container}
@@ -72,32 +72,11 @@ export default function Technical() {
 	)
 }
 
-const software = [
-	{ key: 'photoshop', 	name: 'Photoshop', 			type: 'devicon' },
-	{ key: 'illustrator', 	name: 'Illustrator', 		type: 'devicon' },
-	{ key: 'figma', 		name: 'Figma', 				type: 'devicon' },
-	{ key: 'vscode', 		name: 'VSCode', 			type: 'devicon' },
-	{ key: 'mailbox', 		name: 'Postman', 			type: 'fas' },
-	{ key: 'computer-mouse',name: 'Click Up', 			type: 'fas' },
-	{ key: 'list-music',	name: 'Ableton', 			type: 'fas' },
-	{ key: 'aftereffects',	name: 'After Effects', 		type: 'devicon' },
-	{ key: 'premierepro',	name: 'Premiere Pro', 		type: 'devicon' },
+const experience = [
+	{ key: 'terminal', 		name: 'Experience', 			type: 'fat' },
+	{ key: 'handshake-simple', 	name: 'Simplicity', 		type: 'fat' },
 ]
 
-const tech	= [
-	{ key: 'javascript', 	name: 'JavaScript', 		type: 'devicon' },
-	{ key: 'nodejs', 		name: 'NodeJS', 			type: 'devicon' },
-	{ key: 'react', 		name: 'React', 				type: 'devicon' },
-	{ key: 'nextjs', 		name: 'NextJS', 			type: 'devicon' },
-	{ key: 'jquery', 		name: 'jQuery', 			type: 'devicon' },
-	{ key: 'php', 			name: 'PHP', 				type: 'devicon' },
-	{ key: 'wordpress', 	name: 'WordPress', 			type: 'devicon' },
-	{ key: 'woocommerce', 	name: 'WooCommerce', 		type: 'devicon' },
-	{ key: "google",		name: "GA4/GTM", 			type: "devicon" },
-	{ key: 'html5', 		name: 'HTML5', 				type: 'devicon' },
-	{ key: 'css3', 			name: 'CSS3', 				type: 'devicon' },
-	{ key: 'sass', 			name: 'SASS', 				type: 'devicon' },
-	{ key: 'git', 			name: 'Git', 				type: 'devicon' },
-	{ key: 'mysql', 		name: 'MySQL', 				type: 'devicon' },
-	{ key: 'mongodb', 		name: 'MongoDB', 			type: 'devicon' },
+const transparency	= [
+	{ key: 'wand-magic-sparkles', 	name: 'find something', 		type: 'fat' },
 ]
