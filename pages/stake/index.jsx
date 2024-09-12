@@ -13,7 +13,6 @@ export default function Projects({ user, repos }) {
 		<>
 		<Color colors={colors} />
 		<FeaturedProjects />
-		<GitRecentProjects user={user} repos={repos} />
 		</>
 	)
 }
