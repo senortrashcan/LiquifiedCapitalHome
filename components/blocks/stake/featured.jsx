@@ -12,7 +12,7 @@ import content 		from '../../../content/stake/featured.json'
 
 export default function FeaturedProject({ content }, index) {
 
-	const { project, url, repo, descriptionTitle,description, stack, imageOptions, images } = content
+	const { project, url, descriptionTitle,description, stack, imageOptions, images } = content
 
 	const controls = useAnimation();
 	const { ref, inView  } = useInView({
@@ -48,12 +48,7 @@ export default function FeaturedProject({ content }, index) {
 						<Badges list={stack} block="stack" fullContainer={false} color={false} />
 					</div>
 					<m.div variants={''} className={css.viewProject}>
-						<a href="https://liquified.capital/solana" target="_blank" rel="noopener noreferrer">
-							<Icon icon={[ 'fad', 'arrow-right-to-bracket' ]} />
-						</a>
-					</m.div>
-					<m.div variants={''} className={css.viewProject}>
-						<a href="https://liquified.capital/cardano" target="_blank" rel="noopener noreferrer">
+						<a href={url} target="_blank" rel="noopener noreferrer">
 							<Icon icon={[ 'fad', 'arrow-right-to-bracket' ]} />
 						</a>
 					</m.div>
