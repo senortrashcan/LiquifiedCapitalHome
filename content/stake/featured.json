@@ -1,7 +1,7 @@
 [
 	{
 		"project": "Solana Staking",
-		"url": "www.liquified.capital",
+		"url": "https://www.liquified.capital/solana",
 		"descriptionTitle": "Your Gateway to Effortless SOL Staking.",
 		"description": "We offer a seamless, user-friendly experience designed for both seasoned investors and newcomers alike.",
 		"imageOptions": [
@@ -21,7 +21,7 @@
 	},
 	{
 		"project": "Cardano Staking (Coming Soon)",
-		"url": "www.liquified.capital/stake",
+		"url": "https://www.liquified.capital/cardano",
 		"descriptionTitle": "Maximize Your ADA Holdings Here",
 		"description": "Empower your crypto journey with Liquified Capital, your premier platform for seamless and secure Cardano staking",
 		"imageOptions": [
