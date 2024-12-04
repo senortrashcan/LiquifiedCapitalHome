@@ -25,7 +25,7 @@ export default function DocumentationPage() {
           <Container>
             <section id="getting-started">
               <h2>Getting Started</h2>
-              <p>Welcome to the documentation! Here's how to get started...</p>
+              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
             </section>
             <section id="installation">
               <h2>Installation</h2>
