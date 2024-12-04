@@ -1,5 +1,5 @@
-import Section from '../structure/section';
-import Container from '../structure/container';
+import Section from '../../structure/section';
+import Container from '../../structure/container';
 import Sidebar from './Sidebar';
 import styles from './Docs.module.scss';
 
