@@ -1,5 +1,4 @@
 // Sections
-import GitRecentProjects from '../../components/sections/stake/recent'
 import FeaturedProjects from '../../components/sections/stake/featured'
 
 import Color  from '../../components/utils/page.colors.util'
