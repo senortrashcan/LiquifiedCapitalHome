@@ -1,0 +1,40 @@
+.layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin: 10px 0;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .sidebar a:hover {
+    color: #007acc;
+  }
+  
+  .content {
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .content section {
+    margin-bottom: 40px;
+  }
+  
