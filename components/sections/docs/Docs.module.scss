@@ -8,7 +8,7 @@
 
 .content {
   flex: 1; // Take up the remaining space
-  padding: 20px; // Add padding for content
+  padding: 100px; // Add padding for content
   overflow: visible; // Ensure content scrolls with the page
   box-sizing: border-box; // Ensure padding doesn’t exceed container bounds
 }
@@ -17,7 +17,7 @@
   width: 250px; // Fixed width for the sidebar
   height: calc(100vh - 20px); // Full viewport height minus top padding
   position: sticky; // Makes the sidebar follow the user
-  top: 20px; // Padding from the top of the viewport
+  top: 100px; // Padding from the top of the viewport
   background-color: #f8f9fa; // Light background color
   border-right: 1px solid #e0e0e0; // Border on the right side
   padding: 20px; // Padding inside the sidebar
