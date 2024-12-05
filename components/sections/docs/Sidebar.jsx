@@ -10,7 +10,7 @@ export default function Sidebar({ sections }) {
 
     if (targetElement) {
       const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 0; // Adjust for navbar height
-      const extraPadding = 20; // Add extra padding above the section
+      const extraPadding = 75; // Add extra padding above the section
       const targetPosition = targetElement.offsetTop - navbarHeight - extraPadding;
 
       window.scrollTo({
