@@ -1,33 +1,71 @@
-.navbar {
-  position: fixed; // Fix the navbar at the top
-  top: 0; // Align it to the top of the viewport
-  left: 0;
-  width: 100%; // Span the full width of the page
-  z-index: 1000; // Ensure it appears above other elements
-  background-color: #fff; // Background color
-  border-bottom: 1px solid #e0e0e0; // Subtle bottom border
-  padding: 10px 20px; // Adjust padding as needed
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); // Optional shadow for depth
-}
-
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: flex-start; // Align menu items
-}
-
-.navbar li {
-  margin-right: 20px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: #007acc; // Highlight on hover
+.sidebar {
+    background-color: #f8f9fa; // Light background for contrast
+    border-right: 1px solid #e0e0e0; // Subtle border for separation
+    height: 100vh; // Full viewport height
+    width: 250px; // Fixed width for the sidebar
+    overflow-y: auto; // Scrollable if content exceeds height
+    padding: 20px; // Spacing for content
+    position: sticky; // Sticks to the top during scrolling
+    top: 0;
+    font-family: 'Arial', sans-serif;
+  
+    ul {
+      list-style: none; // Remove bullet points
+      padding: 0;
+      margin: 0;
+    }
+  
+    li {
+      margin-bottom: 10px; // Space between items
+  
+      &:last-child {
+        margin-bottom: 0; // Remove space after the last item
+      }
+  
+      a {
+        text-decoration: none; // Remove underline
+        color: #333; // Default text color
+        padding: 8px 12px; // Add padding for clickable area
+        display: block; // Make the entire area clickable
+        border-radius: 4px; // Rounded corners
+        transition: all 0.3s ease; // Smooth transitions for hover and active effects
+  
+        &:hover {
+          background-color: #007acc; // Hover background
+          color: #fff; // Hover text color
+        }
+      }
+  
+      &.active a {
+        background-color: #005f99; // Active background
+        color: #fff; // Active text color
+        font-weight: bold; // Highlight active item
+      }
+  
+      ul {
+        margin-left: 15px; // Indent nested items
+        border-left: 2px solid #e0e0e0; // Indicate nesting
+        padding-left: 10px;
+  
+        li a {
+          font-size: 0.9rem; // Smaller font for subsections
+          padding: 6px 10px; // Adjust padding for subsections
+        }
+      }
+    }
   }
-}
+  
+  /* Scrollbar styling for the sidebar */
+  .sidebar::-webkit-scrollbar {
+    width: 8px; // Narrower scrollbar
+  }
+  
+  .sidebar::-webkit-scrollbar-thumb {
+    background: #ccc; // Thumb color
+    border-radius: 4px;
+  }
+  
+  .sidebar::-webkit-scrollbar-thumb:hover {
+    background: #999; // Darker on hover
+  }
+  
