@@ -5,8 +5,8 @@
     width: 250px; // Fixed width for the sidebar
     overflow-y: auto; // Scrollable if content exceeds height
     padding: 20px; // Spacing for content
-    position: sticky; // Sticks to the top during scrolling
-    top: 0;
+    position: fixed; // Sticks to the top during scrolling
+    top: 100;
     font-family: 'Arial', sans-serif;
   
     ul {
