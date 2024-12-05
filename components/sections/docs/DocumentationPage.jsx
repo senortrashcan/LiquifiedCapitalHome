@@ -26,9 +26,28 @@ export default function DocumentationPage() {
             <section id="getting-started">
               <h2>Getting Started</h2>
               <p>Welcome to the documentation! Here&apos;s how to get started...</p>
+              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
+              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
+              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
+              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
+              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
+              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
+              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
+              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
+              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
+              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
+              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
             </section>
             <section id="installation">
               <h2>Installation</h2>
+              <p>Follow these steps to install...</p>
+              <p>Follow these steps to install...</p>
+              <p>Follow these steps to install...</p>
+              <p>Follow these steps to install...</p>
+              <p>Follow these steps to install...</p>
+              <p>Follow these steps to install...</p>
+              <p>Follow these steps to install...</p>
+              <p>Follow these steps to install...</p>
               <p>Follow these steps to install...</p>
               <div id="step-1">
                 <h3>Step 1: Download</h3>
@@ -41,6 +60,21 @@ export default function DocumentationPage() {
             </section>
             <section id="usage">
               <h2>Usage</h2>
+              <p>Learn how to use...</p>
+              <p>Learn how to use...</p>
+              <p>Learn how to use...</p>
+              <p>Learn how to use...</p>
+              <p>Learn how to use...</p>
+              <p>Learn how to use...</p>
+              <p>Learn how to use...</p>
+              <p>Learn how to use...</p>
+              <p>Learn how to use...</p>
+              <p>Learn how to use...</p>
+              <p>Learn how to use...</p>
+              <p>Learn how to use...</p>
+              <p>Learn how to use...</p>
+              <p>Learn how to use...</p>
+              <p>Learn how to use...</p>
               <p>Learn how to use...</p>
             </section>
           </Container>
