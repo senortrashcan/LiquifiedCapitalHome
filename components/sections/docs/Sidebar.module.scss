@@ -1,33 +1,61 @@
-.navbar {
-  position: fixed; // Fix the navbar at the top
-  top: 0; // Align it to the top of the viewport
-  left: 0;
-  width: 100%; // Span the full width of the page
-  z-index: 1000; // Ensure it appears above other elements
+.sidebar {
+  position: sticky; // Make the sidebar follow the user as they scroll
+  top: 20px; // Keeps it slightly below the top of the viewport
+  width: 250px; // Fixed width
+  margin-left: 20px; // Spacing from the left edge of the page
   background-color: #fff; // Background color
-  border-bottom: 1px solid #e0e0e0; // Subtle bottom border
-  padding: 10px 20px; // Adjust padding as needed
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); // Optional shadow for depth
-}
+  border: 1px solid #e0e0e0; // Subtle border
+  border-radius: 12px; // Rounded corners for the box
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Optional shadow for depth
+  overflow: hidden; // Prevents content from spilling out
+  padding: 15px; // Padding inside the box
+  font-family: 'Arial', sans-serif;
 
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: flex-start; // Align menu items
-}
-
-.navbar li {
-  margin-right: 20px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: #007acc; // Highlight on hover
+  ul {
+    list-style: none; // Remove bullet points
+    padding: 0;
+    margin: 0;
   }
+
+  li {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 12px;
+      display: block; // Make the entire area clickable
+      border-radius: 6px; // Slightly rounded link background
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #007acc;
+        color: #fff;
+      }
+    }
+
+    &.active a {
+      background-color: #005f99;
+      color: #fff;
+      font-weight: bold;
+    }
+  }
+}
+
+/* Optional scrollbar styling for the sidebar */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #999;
 }
