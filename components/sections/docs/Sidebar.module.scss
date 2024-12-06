@@ -7,6 +7,7 @@
   border: 1px solid #e0e0e0; // Subtle border
   border-radius: 12px; // Rounded corners for the box
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Optional shadow for depth
+  overflow: auto; // Prevents content from spilling out
   padding: 15px; // Padding inside the box
   font-family: 'Arial', sans-serif;
 
