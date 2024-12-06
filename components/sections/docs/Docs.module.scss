@@ -23,20 +23,46 @@
 .sidebar ul {
   list-style: none;
   padding: 0;
-}
+  margin: 0;
 
-.sidebar li {
-  margin: 10px 0;
-}
+  li {
+    margin: 10px 0;
 
-.sidebar a {
-  text-decoration: none;
-  color: #333;
-  transition: color 0.2s ease-in-out;
-}
+    a {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 12px;
+      display: block;
+      font-size: 16px; // Default font size for main sections
+      font-weight: bold; // Bold for main sections
+      transition: color 0.2s ease-in-out;
 
-.sidebar a:hover {
-  color: #007acc;
+      &:hover {
+        color: #007acc;
+      }
+    }
+
+    // Styling for nested subsections
+    ul {
+      margin-top: 5px; // Space between main section and subsections
+      padding-left: 20px; // Indent subsections
+      list-style: none;
+
+      li {
+        margin: 5px 0;
+
+        a {
+          font-size: 14px; // Smaller font size for subsections
+          font-weight: normal; // Lighter weight for subsections
+          color: #555; // Slightly dimmer color
+
+          &:hover {
+            color: #007acc; // Match hover color
+          }
+        }
+      }
+    }
+  }
 }
 
 .content section {
