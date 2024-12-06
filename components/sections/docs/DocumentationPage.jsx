@@ -6,12 +6,20 @@ import styles from './Docs.module.scss';
 export default function DocumentationPage() {
   const sections = [
     { id: 'getting-started', title: 'Getting Started' },
+    { id: 'what-is-staking', title: 'What Is Staking?' },
     {
-      id: 'installation',
-      title: 'Installation',
+      id: 'technical-solana',
+      title: 'How Staking Works on Solana',
       subsections: [
-        { id: 'step-1', title: 'Step 1: Download' },
-        { id: 'step-2', title: 'Step 2: Install' },
+        { id: 'Validators-and-Delegators', title: '• Validators and Delegators' },
+        { id: 'How-Delegation-Works', title: '• How Delegation Works' },
+        { id: 'How-Delegation-Works', title: '• How Delegation Works' },
+        { id: 'How-Delegation-Works', title: '• How Delegation Works' },
+        { id: 'How-Delegation-Works', title: '• How Delegation Works' },
+        { id: 'How-Delegation-Works', title: '• How Delegation Works' },
+        { id: 'How-Delegation-Works', title: '• How Delegation Works' },
+        { id: 'How-Delegation-Works', title: '• How Delegation Works' },
+        { id: 'Tech-Summary', title: '• How Delegation Works' },
       ],
     },
     { id: 'usage', title: 'Usage' },
@@ -25,37 +33,27 @@ export default function DocumentationPage() {
           <Container>
             <section id="getting-started">
               <h2>Getting Started</h2>
-              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
-              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
-              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
-              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
-              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
-              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
-              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
-              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
-              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
-              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
-              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
-              <p>Welcome to the documentation! Here&apos;s how to get started...</p>
+              <p>Welcome to Liquified Capital! This guide will help you understand what staking on Solana is and how Liquified Capital simplifies the process, empowering you to earn rewards while contributing to the security and efficiency of the Solana blockchain.</p>
             </section>
-            <section id="installation">
-              <h2>Installation</h2>
-              <p>Follow these steps to install...</p>
-              <p>Follow these steps to install...</p>
-              <p>Follow these steps to install...</p>
-              <p>Follow these steps to install...</p>
-              <p>Follow these steps to install...</p>
-              <p>Follow these steps to install...</p>
-              <p>Follow these steps to install...</p>
-              <p>Follow these steps to install...</p>
-              <p>Follow these steps to install...</p>
-              <div id="step-1">
-                <h3>Step 1: Download</h3>
-                <p>Details for step 1...</p>
+            <section id="what-is-staking">
+              <h2>What Is Staking?</h2>
+              <p>Welcome to Liquified Capital! This guide will help you understand what staking on Solana is and how Liquified Capital simplifies the process, empowering you to earn rewards while contributing to the security and efficiency of the Solana blockchain.</p>
+
+            </section>
+            <section id="technical-solana">
+              <h2>How Staking Works on Solana</h2>
+              <p>Staking on Solana involves delegating your SOL tokens to validators who perform critical functions to secure and operate the blockchain. This process is integral to Solana's high-performance, Proof-of-Stake (PoS) mechanism, which is augmented by a unique innovation called Proof of History (PoH). Here&aposs an in-depth look at how staking works:</p>
+              <div id="Validators-and-Delegators">
+                <h3>Validators and Delegators</h3>
+                <p>Validators: Validators are specialized nodes responsible for processing transactions, producing new blocks, and verifying the chain’s integrity. They maintain the blockchain by running high-performance servers capable of handling Solana’s throughput.
+                Delegators: Delegators are SOL token holders who choose to support specific validators by "delegating" their tokens. Delegators are not giving up ownership of their tokens but instead trust validators to act in their interest.</p>
               </div>
-              <div id="step-2">
-                <h3>Step 2: Install</h3>
-                <p>Details for step 2...</p>
+              <div id="How-Delegation-Works">
+                <h3>How Delegation Works</h3>
+                <p>When you delegate your SOL tokens:
+Stake Account Creation: A dedicated "stake account" is created on the blockchain, containing your delegated tokens and metadata (e.g., validator details, rewards history).
+Bonding Period: Once delegated, there’s a brief activation period (typically one epoch, about 2-3 days) before your stake becomes active and starts earning rewards.
+Delegation to Validators: Your tokens are associated with a validator but are never moved from your wallet to theirs. Validators cannot access or misuse your staked tokens.</p>
               </div>
             </section>
             <section id="usage">
