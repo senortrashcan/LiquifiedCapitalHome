@@ -74,7 +74,7 @@ export default function DocumentationPage() {
               <div id="Unstaking-and-Deactivation" style={{ marginBottom: '20px' }}>
                 <h3>5. Unstaking and Deactivation</h3>
                 <p>
-                <b>• Deactivating Stake:</b> If you choose to stop staking, you can deactivate your stake account. Your tokens enter a "cooldown period," typically lasting one epoch, before becoming fully accessible.<br />
+                <b>• Deactivating Stake:</b> If you choose to stop staking, you can deactivate your stake account. Your tokens enter a &quot;cooldown period,&quot; typically lasting one epoch, before becoming fully accessible.<br />
                 <b>• Unstaking Flexibility:</b> Solana allows you to redelegate your stake to another validator at any time without withdrawing your tokens entirely.<br />
                 </p>
               </div>
@@ -88,7 +88,7 @@ export default function DocumentationPage() {
               <div id="pos" style={{ marginBottom: '20px' }}>
                 <h3>7. Slashing Risks</h3>
                 <p>
-                Unlike some PoS networks, <b>Solana does not currently implement slashing</b> (a penalty where staked tokens are partially confiscated for validator misbehavior). However, choosing a reliable validator remains crucial since poor performance directly impacts your staking rewards.<br />
+                Unlike some PoS networks, <b>Solana does not currently implement slashing</b> (a penalty where staked tokens are partially confiscated for validator misbehavior). However, choosing a reliable validator (Liquified Capital) remains crucial since poor performance directly impacts your staking rewards.<br />
                 </p>
               </div>
             
