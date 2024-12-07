@@ -43,7 +43,7 @@ export default function DocumentationPage() {
               <div id="Validators-and-Delegators" style={{ marginTop: '20px', marginBottom: '20px' }}>
                 <h3>1. Validators and Delegators</h3>
                 <p2>
-                <b>• Validators:</b> Validators are specialized nodes responsible for processing transactions, producing new blocks, and verifying the chain&aposs integrity. They maintain the blockchain by running high-performance servers capable of handling Solana&apos;s throughput.<br />
+                <b>• Validators:</b> Validators are specialized nodes responsible for processing transactions, producing new blocks, and verifying the chain&apos;s integrity. They maintain the blockchain by running high-performance servers capable of handling Solana&apos;s throughput.<br />
                 <b>• Delegators:</b> Delegators are SOL token holders who choose to support specific validators by &quot;delegating&quot; their tokens. Delegators are not giving up ownership of their tokens but instead trust validators to act in their interest.<br />
                 </p2>
               </div>
@@ -107,7 +107,7 @@ export default function DocumentationPage() {
               <p>
               By staking your SOL tokens, you actively contribute to Solana&apos;s scalability and security while earning rewards. Solana&apos;s staking mechanism is designed to balance decentralization, performance, and accessibility, ensuring a smooth and rewarding experience for delegators. Through Liquified Capital, we simplify this process and provide the tools you need to stake with confidence.<br />
 
-              If you're ready to start staking or have more questions, visit the Support Page or contact us directly!
+              If you&apos;re ready to start staking or have more questions, visit the Support Page or contact us directly!
               </p>
 
             </section>
