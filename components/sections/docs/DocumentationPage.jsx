@@ -74,7 +74,7 @@ export default function DocumentationPage() {
               <div id="Unstaking-and-Deactivation" style={{ marginBottom: '20px' }}>
                 <h3>5. Unstaking and Deactivation</h3>
                 <p>
-                <b>• Deactivating Stake:</b> If you choose to stop staking, you can deactivate your stake account. Your tokens enter a &quot;cooldown period,&quot; typically lasting one epoch, before becoming fully accessible.<br />
+                <strong>• Deactivating Stake:</strong> If you choose to stop staking, you can deactivate your stake account. Your tokens enter a &quot;cooldown period,&quot; typically lasting one epoch, before becoming fully accessible.<br />
                 <b>• Unstaking Flexibility:</b> Solana allows you to redelegate your stake to another validator at any time without withdrawing your tokens entirely.<br />
                 </p>
               </div>
