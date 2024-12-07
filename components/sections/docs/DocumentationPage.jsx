@@ -63,9 +63,9 @@ Fee Structure: Validators charge a commission fee (a small percentage of the rew
               <div id="Validator-Performance" style={{ marginBottom: '20px' }}>
                 <h3>4. Validator Performance</h3>
                 <p>
-                The rewards you earn depend heavily on your validator’s performance:
-                • Uptime: Validators must remain online and operational to produce and validate blocks. Frequent downtime reduces rewards.
-                • Vote Credits: Solana tracks how many blocks a validator has successfully voted on. Validators with higher vote credits are considered more reliable and are rewarded accordingly.
+                The rewards you earn depend heavily on your validator’s performance:<br />
+                • Uptime: Validators must remain online and operational to produce and validate blocks. Frequent downtime reduces rewards.<br />
+                • Vote Credits: Solana tracks how many blocks a validator has successfully voted on. Validators with higher vote credits are considered more reliable and are rewarded accordingly.<br />
                 </p>
               </div>
               <div id="" style={{ marginBottom: '20px' }}>
