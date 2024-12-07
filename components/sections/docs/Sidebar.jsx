@@ -21,16 +21,20 @@ export default function Sidebar({ sections }) {
   };
 
   return (
-    <nav className="sidebar">
+    <nav className={styles.sidebar}>
       <ul>
         {sections.map((section, index) => (
           <li key={index}>
-            <a href={`#${section.id}`}>{section.title}</a>
+            <a href={`#${section.id}`} onClick={handleSmoothScroll}>
+              {section.title}
+            </a>
             {section.subsections && (
               <ul>
                 {section.subsections.map((sub, subIndex) => (
                   <li key={subIndex}>
-                    <a href={`#${sub.id}`}>{sub.title}</a>
+                    <a href={`#${sub.id}`} onClick={handleSmoothScroll}>
+                      {sub.title}
+                    </a>
                   </li>
                 ))}
               </ul>
