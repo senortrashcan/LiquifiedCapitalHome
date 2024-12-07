@@ -20,6 +20,10 @@
   box-sizing: border-box; // Include padding in the width
 }
 
+.section {
+  margin-bottom: 20px; // Adds space between sections
+}
+
 .sidebar ul {
   list-style: none;
   padding: 0;
