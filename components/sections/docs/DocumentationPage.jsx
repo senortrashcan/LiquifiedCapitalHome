@@ -16,12 +16,11 @@ export default function DocumentationPage() {
         { id: 'Validator-Performance', title: '4. Validator Performance' },
         { id: 'Unstaking-and-Deactivation', title: '5. Unstaking and Deactivation' },
         { id: 'pos', title: '6. Proof of Stake and Proof of History' },
-        { id: 'How-Delegation-Works', title: '7. Slashing Risks' },
-        { id: 'How-Delegation-Works', title: '• How Delegation Works' },
-        { id: 'Tech-Summary', title: '• How Delegation Works' },
+        { id: 'slashing-risks', title: '7. Slashing Risks' },
+        { id: 'Key-Technical', title: '8. Key Technical Metrics to Monitor' },
       ],
     },
-    { id: 'usage', title: 'Usage' },
+    { id: 'Summary', title: 'Summary' },
   ];
 
   return (
@@ -85,33 +84,32 @@ export default function DocumentationPage() {
                 <b>• Proof of History (PoH):</b> Solana’s PoH acts as a cryptographic timestamp that orders transactions and ensures consensus. This allows the network to process transactions asynchronously, significantly increasing throughput.<br />
                 </p>
               </div>
-              <div id="pos" style={{ marginBottom: '20px' }}>
+              <div id="slashing-risks" style={{ marginBottom: '20px' }}>
                 <h3>7. Slashing Risks</h3>
                 <p>
                 Unlike some PoS networks, <b>Solana does not currently implement slashing</b> (a penalty where staked tokens are partially confiscated for validator misbehavior). However, choosing a reliable validator (Liquified Capital) remains crucial since poor performance directly impacts your staking rewards.<br />
                 </p>
               </div>
+              <div id="Key-Technical" style={{ marginBottom: '20px' }}>
+                <h3>8. Key Technical Metrics to Monitor</h3>
+                <p>
+                When staking on Solana, keep an eye on the following validator metrics:<br />
+                • Commission Rate: The percentage of rewards kept by the validator.<br />
+                • Performance History: Validator reliability and uptime over time.<br />
+                • Stake Weight: The total amount of SOL delegated to a validator, influencing its chances of being selected to produce blocks.<br />
+                </p>
+              </div>
             
 
             </section>
-            <section id="usage">
-              <h2>Usage</h2>
-              <p>Learn how to use...</p>
-              <p>Learn how to use...</p>
-              <p>Learn how to use...</p>
-              <p>Learn how to use...</p>
-              <p>Learn how to use...</p>
-              <p>Learn how to use...</p>
-              <p>Learn how to use...</p>
-              <p>Learn how to use...</p>
-              <p>Learn how to use...</p>
-              <p>Learn how to use...</p>
-              <p>Learn how to use...</p>
-              <p>Learn how to use...</p>
-              <p>Learn how to use...</p>
-              <p>Learn how to use...</p>
-              <p>Learn how to use...</p>
-              <p>Learn how to use...</p>
+            <section id="Summary">
+              <h2>Summary</h2>
+              <p>
+              By staking your SOL tokens, you actively contribute to Solana&apos;s scalability and security while earning rewards. Solana&apos;s staking mechanism is designed to balance decentralization, performance, and accessibility, ensuring a smooth and rewarding experience for delegators. Through Liquified Capital, we simplify this process and provide the tools you need to stake with confidence.<br />
+
+              If you're ready to start staking or have more questions, visit the Support Page or contact us directly!
+              </p>
+
             </section>
           </Container>
         </main>
