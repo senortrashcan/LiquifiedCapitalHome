@@ -107,7 +107,7 @@ export default function DocumentationPage() {
               <p>
               By staking your SOL tokens, you actively contribute to Solana&apos;s scalability and security while earning rewards. Solana&apos;s staking mechanism is designed to balance decentralization, performance, and accessibility, ensuring a smooth and rewarding experience for delegators. Through Liquified Capital, we simplify this process and provide the tools you need to stake with confidence.<br />
 
-              If you&apos;re ready to start staking or have more questions, visit the Support Page or contact us directly!
+              If you&apos;re ready to start staking, head over to our DAPP! Happy Staking!
               </p>
 
             </section>
