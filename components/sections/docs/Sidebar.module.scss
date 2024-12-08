@@ -59,7 +59,8 @@
           color: #555; // Slightly dimmer color
 
           &:hover {
-            color: #007acc; // Match hover color
+            background-color: #007acc;
+            color: #ffffff; // Match hover color
           }
         }
       }
