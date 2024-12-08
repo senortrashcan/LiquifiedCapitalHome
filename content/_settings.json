@@ -2,14 +2,10 @@
 	"name": "Liquified Capital",
 	"logo": "",
 	
-	"username": {
-		"github": "",
-		"medium": ""
-	},
 
 	"portfolio": { 
 		"forkthis": "© Copyright 2024 LiquifiedCapital.com. All rights reserved.",
-		"repo_html": "",
+		"56_html": "",
 		"repo_api": ""
 	}
 }
