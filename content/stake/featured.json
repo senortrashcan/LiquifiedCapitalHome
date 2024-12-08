@@ -7,7 +7,7 @@
 		"imageOptions": [
 		],
 		"images": [
-			{ "key": "mock-stack",	"hover": "left",	"h": "1200", "w": "556", "url": "/img/msc-mock_stack/SOL.png" }
+			{ "key": "mock-stack",	"hover": "up",	"h": "2779", "w": "1200", "url": "/img/msc-mock_stack/sol.png" }
 		],
 		"stack": [
 			{"name": "SOL"},
