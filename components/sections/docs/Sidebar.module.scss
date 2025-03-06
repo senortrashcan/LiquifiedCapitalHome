@@ -8,7 +8,7 @@
   background-color: #111;
   border-radius: 12px;
   color: white;
-  padding: 15px;
+  padding: 5px;
   transform: translateX(-100%); // Hide by default
   transition: transform 0.3s ease-in-out;
   z-index: 1000;
@@ -48,7 +48,7 @@
 // Mobile Menu Button
 .menuButton {
   position: fixed;
-  top: 100px;
+  top: 70px;
   left: 15px;
   background: #111;
   color: white;
