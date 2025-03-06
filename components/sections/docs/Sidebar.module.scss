@@ -1,88 +1,78 @@
+// Sidebar Styles
 .sidebar {
-  position: fixed; // Make the sidebar follow the user as they scroll
-  top: 100px; // Keeps it slightly below the top of the viewport
-  width: 250px; // Fixed width
-  margin-left: 20px; // Spacing from the left edge of the page
-  background-color: #fff; // Background color
-  border: 1px solid #e0e0e0; // Subtle border
-  border-radius: 12px; // Rounded corners for the box
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Optional shadow for depth
-  overflow: auto; // Allow scrolling if content exceeds available height
-  padding: 15px; // Padding inside the box
-  font-family: 'Arial', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #111;
+  color: white;
+  padding: 20px;
+  transform: translateX(-100%); // Hide by default
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
 
   ul {
-    list-style: none; // Remove bullet points
+    list-style: none;
     padding: 0;
-    margin: 0;
-  }
 
-  li {
-    margin-bottom: 10px;
+    li {
+      margin: 10px 0;
 
-    &:last-child {
-      margin-bottom: 0;
-    }
+      a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background 0.3s;
 
-    a {
-      text-decoration: none;
-      color: #333;
-      padding: 4px 2px;
-      display: block;
-      font-size: 16px; // Default font size for main sections
-      font-weight: bold; // Bold for main sections
-      transition: color 0.2s ease-in-out;
-
-      &:hover {
-        background-color: #007acc;
-        color: #fff;
-      }
-    }
-
-    &.active a {
-      background-color: #005f99;
-      color: #fff;
-      font-weight: bold;
-    }
-
-    ul {
-      margin-top: 5px; // Space between main section and subsections
-      padding-left: 20px; // Indent subsections
-      list-style: none;
-
-      li {
-        margin: 5px 0;
-
-        a {
-          font-size: 14px; // Smaller font size for subsections
-          font-weight: normal; // Lighter weight for subsections
-          color: #555; // Slightly dimmer color
-
-          &:hover {
-            background-color: #007acc;
-            color: #ffffff; // Match hover color
-          }
+        &:hover {
+          background: rgba(255, 255, 255, 0.2);
         }
       }
+
+      ul {
+        padding-left: 15px;
+      }
     }
   }
 }
 
-.content section {
-  margin-bottom: 40px;
+// Sidebar open state
+.open {
+  transform: translateX(0);
 }
 
-
-/* Optional scrollbar styling for the sidebar */
-.sidebar::-webkit-scrollbar {
-  width: 8px;
+// Mobile Menu Button
+.menuButton {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 1100;
+  border-radius: 5px;
 }
 
-.sidebar::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 4px;
+// Overlay for mobile (closes sidebar when clicking outside)
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 900;
 }
 
-.sidebar::-webkit-scrollbar-thumb:hover {
-  background: #999;
+// Desktop Mode: Sidebar always visible
+@media (min-width: 1024px) {
+  .sidebar {
+    transform: translateX(0); // Always visible on desktop
+  }
+  .menuButton {
+    display: none; // Hide menu button on larger screens
+  }
 }
