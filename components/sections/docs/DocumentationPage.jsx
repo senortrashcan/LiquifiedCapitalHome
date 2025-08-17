@@ -76,7 +76,7 @@ export default function DocumentationPage() {
               </div>
               <div className={styles.card}>
                 <p>
-                  Staking on Solana involves delegating your SOL tokens to validators who perform critical functions to secure and operate the blockchain. This process is integral to Solana's high-performance, Proof-of-Stake (PoS) mechanism, which is augmented by a unique innovation called Proof of History (PoH).
+                  Staking on Solana involves delegating your SOL tokens to validators who perform critical functions to secure and operate the blockchain. This process is integral to Solana&aposs high-performance, Proof-of-Stake (PoS) mechanism, which is augmented by a unique innovation called Proof of History (PoH).
                 </p>
               </div>
 
