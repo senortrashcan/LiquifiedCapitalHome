@@ -87,13 +87,13 @@ export default function DocumentationPage() {
                     <div className={styles.definition}>
                       <h4>🖥️ Validators</h4>
                       <p>
-                        Validators are specialized nodes responsible for processing transactions, producing new blocks, and verifying the chain's integrity. They maintain the blockchain by running high-performance servers capable of handling Solana's throughput.
+                        Validators are specialized nodes responsible for processing transactions, producing new blocks, and verifying the chain&aposs integrity. They maintain the blockchain by running high-performance servers capable of handling Solana&aposs throughput.
                       </p>
                     </div>
                     <div className={styles.definition}>
                       <h4>👥 Delegators</h4>
                       <p>
-                        Delegators are SOL token holders who choose to support specific validators by "delegating" their tokens. Delegators are not giving up ownership of their tokens but instead trust validators to act in their interest.
+                        Delegators are SOL token holders who choose to support specific validators by &quotdelegating&quot their tokens. Delegators are not giving up ownership of their tokens but instead trust validators to act in their interest.
                       </p>
                     </div>
                   </div>
@@ -108,13 +108,13 @@ export default function DocumentationPage() {
                     <div className={styles.step}>
                       <span className={styles.stepNumber}>1</span>
                       <div>
-                        <strong>Stake Account Creation:</strong> A dedicated "stake account" is created on the blockchain, containing your delegated tokens and metadata (e.g., validator details, rewards history).
+                        <strong>Stake Account Creation:</strong> A dedicated &quotstake account&quot is created on the blockchain, containing your delegated tokens and metadata (e.g., validator details, rewards history).
                       </div>
                     </div>
                     <div className={styles.step}>
                       <span className={styles.stepNumber}>2</span>
                       <div>
-                        <strong>Bonding Period:</strong> Once delegated, there's a brief activation period (typically one epoch, about 2-3 days) before your stake becomes active and starts earning rewards.
+                        <strong>Bonding Period:</strong> Once delegated, there&aposs a brief activation period (typically one epoch, about 2-3 days) before your stake becomes active and starts earning rewards.
                       </div>
                     </div>
                     <div className={styles.step}>
@@ -144,7 +144,7 @@ export default function DocumentationPage() {
               <div id="validator-performance" className={styles.subsection}>
                 <h3>4. Validator Performance</h3>
                 <div className={styles.card}>
-                  <p>The rewards you earn depend heavily on your validator's performance:</p>
+                  <p>The rewards you earn depend heavily on your validator&aposs performance:</p>
                   <div className={styles.performanceMetrics}>
                     <div className={styles.metric}>
                       <strong>⏰ Uptime:</strong> Validators must remain online and operational to produce and validate blocks. Frequent downtime reduces rewards.
@@ -161,7 +161,7 @@ export default function DocumentationPage() {
                 <div className={styles.card}>
                   <div className={styles.unstakingInfo}>
                     <div className={styles.unstakingItem}>
-                      <strong>⏸️ Deactivating Stake:</strong> If you choose to stop staking, you can deactivate your stake account. Your tokens enter a "cooldown period," typically lasting one epoch, before becoming fully accessible.
+                      <strong>⏸️ Deactivating Stake:</strong> If you choose to stop staking, you can deactivate your stake account. Your tokens enter a &quotcooldown period,&quot typically lasting one epoch, before becoming fully accessible.
                     </div>
                     <div className={styles.unstakingItem}>
                       <strong>🔄 Unstaking Flexibility:</strong> Solana allows you to redelegate your stake to another validator at any time without withdrawing your tokens entirely.
@@ -178,7 +178,7 @@ export default function DocumentationPage() {
                       <strong>🔗 Proof of Stake (PoS):</strong> Staking on Solana follows a PoS model, where validators are selected to produce blocks based on the size of their total stake.
                     </div>
                     <div className={styles.consensusItem}>
-                      <strong>⏱️ Proof of History (PoH):</strong> Solana's PoH acts as a cryptographic timestamp that orders transactions and ensures consensus. This allows the network to process transactions asynchronously, significantly increasing throughput.
+                      <strong>⏱️ Proof of History (PoH):</strong> Solana&aposs PoH acts as a cryptographic timestamp that orders transactions and ensures consensus. This allows the network to process transactions asynchronously, significantly increasing throughput.
                     </div>
                   </div>
                 </div>
@@ -218,7 +218,7 @@ export default function DocumentationPage() {
               </div>
               <div className={styles.card}>
                 <p>
-                  By staking your SOL tokens, you actively contribute to Solana's scalability and security while earning rewards. Solana's staking mechanism is designed to balance decentralization, performance, and accessibility, ensuring a smooth and rewarding experience for delegators.
+                  By staking your SOL tokens, you actively contribute to Solana&aposs scalability and security while earning rewards. Solana&aposs staking mechanism is designed to balance decentralization, performance, and accessibility, ensuring a smooth and rewarding experience for delegators.
                 </p>
                 <p>
                   Through <strong>Liquified Capital</strong>, we simplify this process and provide the tools you need to stake with confidence.
@@ -226,7 +226,7 @@ export default function DocumentationPage() {
                 <div className={styles.ctaSection}>
                   <p><strong>Ready to start staking?</strong></p>
                   <div className={styles.ctaButton}>
-                    <a href="/stake" className={styles.button}>Launch DAPP →</a>
+                    <Link href="/stake" className={styles.button}>Launch DAPP →</Link>
                   </div>
                   <p className={styles.ctaSubtext}>Happy Staking! 🎉</p>
                 </div>
