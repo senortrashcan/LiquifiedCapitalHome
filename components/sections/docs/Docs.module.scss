@@ -30,7 +30,7 @@
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 16px;
-  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  background: linear-gradient(135deg, #7feaff 0%, #c624ee 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -60,10 +60,10 @@
   h2 {
     font-size: 2rem;
     font-weight: 600;
-    color: #1e293b;
+    color: #ffffff;
     margin: 0;
     padding-bottom: 12px;
-    border-bottom: 3px solid #6366f1;
+    border-bottom: 3px solid #7feaff;
     display: inline-block;
   }
 }
@@ -83,7 +83,7 @@
 
 // Card System
 .card {
-  background: #ffffff;
+  background: #0e0f11;
   border-radius: 16px;
   padding: 32px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -99,7 +99,7 @@
   p {
     font-size: 1.1rem;
     line-height: 1.7;
-    color: #475569;
+    color: #888889;
     margin-bottom: 16px;
 
     &:last-child {
