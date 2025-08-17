@@ -11,6 +11,7 @@ export default function Document() {
 		<Html lang="en">
 			<Head>
 				<title>Liquified Capital</title>
+				<meta name="Liquified Capital Staking" content="Decentralized Finance For All" />
 				<link rel="apple-touch-icon" sizes="180x180" href="/favicon/LiquidLogo.png" />
 				<link rel="icon" type="image/png" sizes="32x32" href="/favicon/LiquidLogo.png" />
 				<link rel="icon" type="image/png" sizes="16x16" href="/favicon/LiquidLogo.png" />
