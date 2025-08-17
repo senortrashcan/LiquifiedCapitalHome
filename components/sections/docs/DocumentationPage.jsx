@@ -2,6 +2,7 @@ import Section from '../../structure/section';
 import Container from '../../structure/container';
 import Sidebar from './Sidebar';
 import styles from './Docs.module.scss';
+import button 		from '../../../styles/blocks/button.module.scss';
 
 export default function DocumentationPage() {
   const sections = [
