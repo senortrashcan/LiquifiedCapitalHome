@@ -226,10 +226,6 @@ export default function DocumentationPage() {
                 </p>
                 <div className={styles.ctaSection}>
                   <p><strong>Ready to start staking?</strong></p>
-                  <button	className={`button ${button.primary} leaveSite`}
-							        onClick={ () => window.open("https://liquified.capital", "_blank") } >
-						        {content.buttons.primary.title}
-					        </button>
                   <p className={styles.ctaSubtext}>Happy Staking! 🎉</p>
                 </div>
               </div>
