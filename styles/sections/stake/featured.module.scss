@@ -102,19 +102,22 @@
 }
 
 .imageContainer {
-	z-index: 3;
+	z-index: 50;
 	position: relative;
+	overflow: hidden;
 	display: block;
 	width: 50%;
 	border-radius: 1rem;
 	flex-grow: 1;
 	flex-shrink: 0;
+	
 
 	.imageAnimationContainer {
 		position: absolute;
+		display: block;
 		overflow: hidden;
 		border-radius: 2rem;
-		height: 75%;
+		height: 80%;
 		width: 100%;
 		right: 0;
 		bottom: 0;
@@ -129,6 +132,7 @@
 		}
 	}
 }
+
 
 .privateOr {
 	display: flex;

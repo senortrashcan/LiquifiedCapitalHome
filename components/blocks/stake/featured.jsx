@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { useEffect } from 'react'
 import { m, useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer'
+import Link from 'next/link'
 
 import Badges 		from '../../utils/badge.list.util'
 import Icon 		from '../../utils/icon.util'
@@ -16,7 +17,7 @@ export default function FeaturedProject({ content }, index) {
 
 	const controls = useAnimation();
 	const { ref, inView  } = useInView({
-		"threshold": 0.25,
+		"threshold": 0.15,
 		"triggerOnce": false
 	})
 
@@ -26,50 +27,50 @@ export default function FeaturedProject({ content }, index) {
 	}, [ controls, inView ] )
 
 	return (
-		<m.section 	
-			key={index}
-			className={css.project} 
-			//framer-motion
-			ref={ref}
-			variants={container}
-			initial={[ "rest", "hidden" ]}
-			whileHover="hover"
-			animate={controls} >
-			
-			<div className={css.details}>
-				<div className={css.projectHeader}>
-					<div className={css.header}>
-						<h3 className="highlight">{project}</h3>	
-					</div>
-					<div className={css.description}>
-						<p><strong>{descriptionTitle}</strong> {description}</p>
-					</div>
-					<div className={css.stackContainer}>
-						<Badges list={stack} block="stack" fullContainer={false} color={false} />
-					</div>
-					<m.div variants={''} className={css.viewProject}>
-						<a href={url} target="_blank" rel="noopener noreferrer">
+		<Link href={url} target="_blank" rel="noopener noreferrer">
+			<m.section 	
+				key={index}
+				className={css.project} 
+				//framer-motion
+				ref={ref}
+				variants={container}
+				initial={[ "rest", "hidden" ]}
+				whileHover="hover"
+				animate={controls} >
+				
+				<div className={css.details}>
+					<div className={css.projectHeader}>
+						<div className={css.header}>
+							<h3 className="highlight">{project}</h3>	
+						</div>
+						<div className={css.description}>
+							<p><strong>{descriptionTitle}</strong> {description}</p>
+						</div>
+						<div className={css.stackContainer}>
+							<Badges list={stack} block="stack" fullContainer={false} color={false} />
+						</div>
+						<m.div variants={''} className={css.viewProject}>
 							<Icon icon={[ 'fad', 'arrow-right-to-bracket' ]} />
-						</a>
-					</m.div>
+						</m.div>
+					</div>
 				</div>
-			</div>
 
-			<div className={css.imageContainer}>
-				<span className={`${css.imageAnimationContainer}`}>
-					{ images.map( ({key, url, hover, h, w }, index) => {
-						hover = ( hover === 'left' ) ? hoverLeft : hoverRight
-						return (
-							<m.div key={`${index}-${key}`} variants={item}>
-								<m.div variants={hover}>
-									<Image src={url} alt="x" height={h} width={w} />
+				<div className={css.imageContainer}>
+					<span className={`${css.imageAnimationContainer}`}>
+						{ images.map( ({key, url, hover, h, w }, index) => {
+							hover = ( hover === 'left' ) ? hoverLeft : hoverRight
+							return (
+								<m.div key={`${index}-${key}`} variants={item}>
+									<m.div variants={hover}>
+										<Image src={url} alt="x" height={h} width={w} />
+									</m.div>
 								</m.div>
-							</m.div>
-						)}
-					) }
-				</span>
-			</div>
-		</m.section>
+							)}
+						) }
+					</span>
+				</div>
+			</m.section>
+		</Link>
 	)
 }
 
@@ -126,7 +127,7 @@ const hoverLeft = {
 		x: 0
 	},
 	hover: {
-		x: -20
+		x: -0
 	}
 }
 
@@ -135,7 +136,7 @@ const hoverRight = {
 		x: 0
 	},
 	hover: {
-		x: 20
+		x: 5
 	}
 }
 

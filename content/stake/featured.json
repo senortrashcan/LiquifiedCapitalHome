@@ -7,7 +7,7 @@
 		"imageOptions": [
 		],
 		"images": [
-			{ "key": "mock-stack",	"hover": "up",	"h": "1200", "w": "2779", "url": "/img/msc-mock_stack/01.png" }
+			{ "key": "",	"hover": "up",	"h": "1000", "w": "2560", "url": "/img/stake_img/sol.png" }
 		],
 		"stack": [
 			{"name": "SOL"},
@@ -20,13 +20,13 @@
 	{
 		"project": "Cardano Staking (Coming Soon)",
 		"url": "https://www.liquified.capital/cardano",
-		"descriptionTitle": "Maximize Your ADA Holdings Here",
+		"descriptionTitle": "Maximize Your ADA Holdings Here.",
 		"description": "Empower your crypto journey with Liquified Capital, your premier platform for seamless and secure Cardano staking",
 		"imageOptions": [
-			{ "key": "size", 		"value": "large" }
+			{ "key": "size", 		"value": "medium" }
 		],
 		"images": [
-			{ "key": "portfolio", "hover": "up", "h": "2000", "w": "2000",  "url": "/img/portfolio-mock_single.png" }
+			{ "key": "portfolio", "hover": "up", "h": "350", "w": "350",  "url": "/img/stake_img/cardano.svg" }
 		],
 		"stack": [
 			{"name": "ADA"},
