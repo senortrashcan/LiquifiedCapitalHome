@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Section from '../../structure/section';
 import Container from '../../structure/container';
 import Sidebar from './Sidebar';
@@ -5,6 +6,47 @@ import styles from './Docs.module.scss';
 import button 		from '../../../styles/blocks/button.module.scss';
 
 export default function DocumentationPage() {
+  const [isNavbarHidden, setIsNavbarHidden] = useState(false);
+
+  // Track navbar visibility state
+  useEffect(() => {
+    const observeNavbar = () => {
+      const navbar = document.querySelector('#Navbar');
+      if (!navbar) return;
+
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+            const isHidden = navbar.classList.contains('hidden');
+            setIsNavbarHidden(isHidden);
+          }
+        });
+      });
+
+      observer.observe(navbar, {
+        attributes: true,
+        attributeFilter: ['class']
+      });
+
+      const initiallyHidden = navbar.classList.contains('hidden');
+      setIsNavbarHidden(initiallyHidden);
+
+      return () => observer.disconnect();
+    };
+
+    const checkNavbar = () => {
+      const navbar = document.querySelector('#Navbar');
+      if (navbar) {
+        return observeNavbar();
+      } else {
+        setTimeout(checkNavbar, 100);
+      }
+    };
+
+    const cleanup = checkNavbar();
+    return cleanup;
+  }, []);
+
   const sections = [
     { id: 'getting-started', title: 'Getting Started' },
     { id: 'what-is-staking', title: 'What Is Staking?' },
@@ -26,7 +68,7 @@ export default function DocumentationPage() {
 
   return (
     <Section>
-      <div className={styles.layout}>
+      <div className={`${styles.layout} ${isNavbarHidden ? styles.navbarHidden : ''}`}>
         <Sidebar sections={sections} />
         <main className={styles.content}>
           <Container>
