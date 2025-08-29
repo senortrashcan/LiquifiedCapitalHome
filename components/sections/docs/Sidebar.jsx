@@ -10,6 +10,8 @@ export default function Sidebar({ sections }) {
   const [touchEnd, setTouchEnd] = useState(null);
   const [isLowEndDevice, setIsLowEndDevice] = useState(false);
   const [isNavbarHidden, setIsNavbarHidden] = useState(false);
+  const [isAtFooter, setIsAtFooter] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   // Performance-aware smooth scroll
   const handleSmoothScroll = useCallback((e) => {
@@ -82,14 +84,37 @@ export default function Sidebar({ sections }) {
     return cleanup;
   }, []);
 
-  // Track active section based on scroll position with throttling
+  // Track active section and footer intersection
   useEffect(() => {
     let ticking = false;
 
     const handleScroll = () => {
       if (!ticking) {
         requestAnimationFrame(() => {
-          const scrollPosition = window.scrollY + 150;
+          const currentScrollY = window.scrollY;
+          const scrollPosition = currentScrollY + 150;
+
+          // Check if sidebar should stop at footer
+          const footer = document.querySelector('footer');
+          if (footer) {
+            const footerTop = footer.offsetTop;
+            const navbarHeight = isNavbarHidden ? 0 : 80;
+            const sidebarHeight = isNavbarHidden ?
+              window.innerHeight - 120 : // When navbar hidden
+              window.innerHeight - 200;  // When navbar visible
+
+            const sidebarBottom = currentScrollY + navbarHeight + sidebarHeight;
+            const isScrollingDown = currentScrollY > lastScrollY;
+
+            // Switch to absolute positioning when sidebar would hit footer
+            if (sidebarBottom >= footerTop - 20 && isScrollingDown) {
+              setIsAtFooter(true);
+            } else if (currentScrollY < lastScrollY && sidebarBottom < footerTop - 100) {
+              setIsAtFooter(false);
+            }
+          }
+
+          setLastScrollY(currentScrollY);
 
           // Get all section elements
           const sectionElements = sections.flatMap(section => {
@@ -125,7 +150,7 @@ export default function Sidebar({ sections }) {
     handleScroll(); // Set initial active section
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [sections]);
+  }, [sections, isNavbarHidden, lastScrollY]);
 
   // Touch handlers for mobile swipe gestures
   const handleTouchStart = (e) => {
@@ -179,7 +204,7 @@ export default function Sidebar({ sections }) {
       {/* Sidebar */}
       <nav
         ref={sidebarRef}
-        className={`${styles.sidebar} ${isOpen ? styles.open : ''} ${isNavbarHidden ? styles.navbarHidden : ''}`}
+        className={`${styles.sidebar} ${isOpen ? styles.open : ''} ${isNavbarHidden ? styles.navbarHidden : ''} ${isAtFooter ? styles.atFooter : ''}`}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}

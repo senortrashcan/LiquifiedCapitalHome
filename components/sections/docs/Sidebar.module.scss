@@ -191,6 +191,18 @@
   transition-delay: 0ms; // No delay when contracting
 }
 
+// Footer intersection state - sidebar stops following scroll
+.atFooter {
+  position: absolute !important;
+  top: auto !important;
+  bottom: 120px !important; // Stay above footer
+  transition: all 0.3s ease !important;
+
+  &.navbarHidden {
+    bottom: 120px !important; // Consistent footer clearance
+  }
+}
+
 // Mobile responsiveness
 @media (max-width: 768px) {
   .sidebar {
@@ -210,6 +222,14 @@
   // Mobile navbar hidden state
   .sidebar.navbarHidden {
     height: calc(100vh - 120px) !important; // Only account for footer space
+  }
+
+  // Mobile footer intersection state
+  .sidebar.atFooter {
+    position: absolute !important;
+    bottom: 80px !important; // Less footer space on mobile
+    height: auto !important;
+    max-height: calc(100vh - 160px) !important;
   }
 }
 
