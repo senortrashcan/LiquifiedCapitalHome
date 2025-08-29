@@ -3,6 +3,7 @@ import Section from '../../structure/section';
 import Container from '../../structure/container';
 import Sidebar from './Sidebar';
 import styles from './Docs.module.scss';
+import navbarStyles from '../../../styles/structure/navbar.module.scss';
 import button 		from '../../../styles/blocks/button.module.scss';
 
 export default function DocumentationPage() {
@@ -17,7 +18,7 @@ export default function DocumentationPage() {
       const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
           if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-            const isHidden = navbar.classList.contains('hidden');
+            const isHidden = navbar.classList.contains(navbarStyles.hidden);
             setIsNavbarHidden(isHidden);
           }
         });
@@ -28,7 +29,7 @@ export default function DocumentationPage() {
         attributeFilter: ['class']
       });
 
-      const initiallyHidden = navbar.classList.contains('hidden');
+      const initiallyHidden = navbar.classList.contains(navbarStyles.hidden);
       setIsNavbarHidden(initiallyHidden);
 
       return () => observer.disconnect();

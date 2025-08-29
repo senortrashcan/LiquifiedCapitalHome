@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import styles from './Sidebar.module.scss';
+import navbarStyles from '../../../styles/structure/navbar.module.scss';
 
 export default function Sidebar({ sections }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,7 +48,7 @@ export default function Sidebar({ sections }) {
       const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
           if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-            const isHidden = navbar.classList.contains('hidden');
+            const isHidden = navbar.classList.contains(navbarStyles.hidden);
             setIsNavbarHidden(isHidden);
           }
         });
@@ -60,7 +61,7 @@ export default function Sidebar({ sections }) {
       });
 
       // Check initial state
-      const initiallyHidden = navbar.classList.contains('hidden');
+      const initiallyHidden = navbar.classList.contains(navbarStyles.hidden);
       setIsNavbarHidden(initiallyHidden);
 
       return () => observer.disconnect();

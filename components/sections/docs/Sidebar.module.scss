@@ -10,7 +10,9 @@
   color: var(--primary);
   padding: 0;
   transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out,
+              top 300ms cubic-bezier(0.4, 0, 0.2, 1),
+              height 300ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 999; // Lower than navbar but higher than content
   box-shadow: 4px 0 12px -4px rgba(0, 0, 0, 0.3);
   overflow-y: auto;
@@ -222,7 +224,13 @@
 .navbarHidden {
   top: 0 !important;
   height: 100vh !important;
-  transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1), height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  // When navbar is hiding, wait for it to finish before expanding
+  transition-delay: 275ms; // 275ms navbar delay + 300ms navbar transition
+}
+
+// When navbar becomes visible, contract immediately to avoid intersection
+.sidebar:not(.navbarHidden) {
+  transition-delay: 0ms; // No delay when contracting
 }
 
 // Mobile responsiveness
@@ -271,7 +279,12 @@
   // When navbar is hidden, move button to top
   &.navbarHidden {
     top: 15px;
-    transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 575ms; // Wait for navbar to fully hide before moving
+  }
+
+  // When navbar becomes visible, move back immediately
+  &:not(.navbarHidden) {
+    transition-delay: 0ms; // No delay when moving back
   }
 }
 
