@@ -1,9 +1,6 @@
 // Util packages
 import Icon from '../utils/icon.util'
 
-// Utility packages
-import space from '../utils/spacing.util';
-
 /**
  * About section component block that contains the written copy
  * 
