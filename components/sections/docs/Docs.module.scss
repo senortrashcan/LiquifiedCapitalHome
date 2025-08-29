@@ -1,18 +1,37 @@
 .layout {
   display: flex;
   width: 100%;
-  margin-top: 100px;
-  min-height: calc(100vh - 100px);
+  margin-top: 80px; // Adjusted for proper navbar clearance
+  min-height: calc(100vh - 80px);
+  background: var(--background);
+  transition: margin-top 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  // When navbar is hidden, remove top margin
+  &.navbarHidden {
+    margin-top: 0;
+    min-height: 100vh;
+  }
 }
 
 .content {
   flex: 1;
-  padding: 0 50px 50px 300px; // Left padding for sidebar space
+  padding: 0 50px 120px 300px; // Added bottom padding for footer clearance
   box-sizing: border-box;
   max-width: 100%;
+  background: var(--background);
+  color: var(--primary);
+  min-height: calc(100vh - 200px); // Ensure minimum height for footer spacing
 
   @media (max-width: 1024px) {
-    padding: 20px;
+    padding: 20px 20px 100px 20px; // Added bottom padding for mobile footer
+  }
+
+  @media (max-width: 768px) {
+    padding: 15px 15px 80px 15px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px 10px 60px 10px;
   }
 }
 
