@@ -215,15 +215,6 @@ export default function Sidebar({ sections }) {
             </li>
           ))}
         </ul>
-        
-        <div className={styles.sidebarFooter}>
-          <div className={styles.progressIndicator}>
-            <div className={styles.progressText}>Reading Progress</div>
-            <div className={styles.progressBar}>
-              <div className={styles.progressFill}></div>
-            </div>
-          </div>
-        </div>
       </nav>
 
       {/* Overlay (for mobile) */}

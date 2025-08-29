@@ -4,7 +4,7 @@
   top: 80px; // Adjusted for proper navbar clearance
   left: 0;
   width: 280px;
-  height: calc(100vh - 80px); // Adjusted height
+  height: calc(100vh - 200px); // Account for navbar (80px) + footer space (120px)
   background: var(--background-dim2); // Use site theme colors
   border-right: 1px solid var(--primary-dark);
   color: var(--primary);
@@ -171,49 +171,7 @@
   }
 }
 
-// Sidebar Footer
-.sidebarFooter {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 20px;
-  background: linear-gradient(180deg, transparent 0%, #f8fafc 50%);
-  border-top: 1px solid #e2e8f0;
-}
-
-.progressIndicator {
-  text-align: center;
-}
-
-.progressText {
-  font-size: 0.75rem;
-  color: #64748b;
-  margin-bottom: 8px;
-  font-weight: 500;
-}
-
-.progressBar {
-  width: 100%;
-  height: 4px;
-  background: #e2e8f0;
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-.progressFill {
-  height: 100%;
-  background: linear-gradient(90deg, #6366f1 0%, #a855f7 100%);
-  border-radius: 2px;
-  width: 0%;
-  transition: width 0.3s ease;
-  animation: progressPulse 2s ease-in-out infinite;
-}
-
-@keyframes progressPulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
-}
+// Removed sidebar footer and progress indicator to prevent footer interference
 
 // Sidebar open state
 .open {
@@ -223,7 +181,7 @@
 // Navbar hidden state - sidebar expands to fill space
 .navbarHidden {
   top: 0 !important;
-  height: 100vh !important;
+  height: calc(100vh - 120px) !important; // Account for footer space
   // When navbar is hiding, wait for it to finish before expanding
   transition-delay: 275ms; // 275ms navbar delay + 300ms navbar transition
 }
@@ -237,7 +195,7 @@
 @media (max-width: 768px) {
   .sidebar {
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 200px); // Account for navbar + footer space
     background: var(--background);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -247,6 +205,11 @@
 
   .sidebar.open {
     transform: translateX(0);
+  }
+
+  // Mobile navbar hidden state
+  .sidebar.navbarHidden {
+    height: calc(100vh - 120px) !important; // Only account for footer space
   }
 }
 
@@ -321,6 +284,11 @@
   .sidebar {
     width: 100%;
     max-width: 320px;
+    height: calc(100vh - 200px); // Ensure footer clearance
+  }
+
+  .sidebar.navbarHidden {
+    height: calc(100vh - 120px) !important; // Only footer space when navbar hidden
   }
   
   .sidebarHeader {
@@ -339,10 +307,6 @@
   .subItem a {
     padding: 8px 16px 8px 32px;
     font-size: 0.8rem;
-  }
-  
-  .sidebarFooter {
-    padding: 16px;
   }
 }
 
@@ -408,20 +372,7 @@
       }
     }
   }
-  
-  .sidebarFooter {
-    background: linear-gradient(180deg, transparent 0%, #0f172a 50%);
-    border-top-color: #334155;
-  }
-  
-  .progressText {
-    color: #94a3b8;
-  }
-  
-  .progressBar {
-    background: #334155;
-  }
-  
+
   .overlay {
     background: rgba(0, 0, 0, 0.7);
   }
