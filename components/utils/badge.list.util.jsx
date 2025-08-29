@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
-import { m, useAnimation } from "framer-motion"
+import { useEffect, useState } from 'react'
+import { m, useAnimation, useReducedMotion } from "framer-motion"
 import { useInView } from 'react-intersection-observer'
 
 // Utility components
@@ -13,70 +13,98 @@ import badges from '../../styles/blocks/badges.module.scss';
 
 export default function Badges({ list, block, color, fullContainer }) {
 
+	// Performance optimizations
+	const shouldReduceMotion = useReducedMotion()
+	const [isLowEndDevice, setIsLowEndDevice] = useState(false)
+
 	const controls = useAnimation();
-	const { ref, inView  } = useInView({
-		"threshold": 0.5,
-		"triggerOnce": false
+	const { ref, inView } = useInView({
+		threshold: 0.6, // Higher threshold for better performance
+		triggerOnce: true, // Only animate once
+		rootMargin: '20px'
 	})
 
-	useEffect( () => {
-		if ( inView ) {	controls.start("visible") }
-		if ( !inView ) { controls.start("hidden") }
-	}, [ controls, inView ] );
+	// Detect low-end devices
+	useEffect(() => {
+		const hardwareConcurrency = navigator.hardwareConcurrency || 2
+		const deviceMemory = navigator.deviceMemory || 2
+		setIsLowEndDevice(hardwareConcurrency < 4 || deviceMemory < 4)
+	}, [])
 
+	useEffect(() => {
+		if (shouldReduceMotion || isLowEndDevice) {
+			return // Skip animations
+		}
+
+		if (inView) {
+			controls.start("visible")
+		}
+	}, [controls, inView, shouldReduceMotion, isLowEndDevice])
+
+	// Simplified animations for better performance
 	const container = {
-		hidden: { 
-			opacity: 1,
+		hidden: {
+			opacity: 0,
 			transition: {
-				delayChildren: 0.25,
-				staggerChildren: 0.025
+				duration: 0.2,
+				ease: "easeOut"
 			}
 		},
 		visible: {
 			opacity: 1,
 			transition: {
-				delayChildren: 0.025,
-				staggerChildren: 0.1
+				duration: 0.3,
+				ease: "easeOut"
 			}
 		}
 	}
-	
+
 	const item = {
-		hidden: { 
-			y: 20, 
-			opacity: -0.5 
+		hidden: {
+			y: 10, // Reduced movement
+			opacity: 0
 		},
 		visible: {
 			y: 0,
-			opacity: 1
+			opacity: 1,
+			transition: {
+				duration: 0.25, // Faster animation
+				ease: "easeOut"
+			}
 		}
 	}
 
+	// Use regular ul for low-end devices or reduced motion preference
+	const ListComponent = (shouldReduceMotion || isLowEndDevice) ? 'ul' : m.ul
+	const motionProps = (shouldReduceMotion || isLowEndDevice) ? {} : {
+		variants: container,
+		initial: "hidden",
+		animate: controls,
+		whileHover: "hover"
+	}
+
 	return (
-		<m.ul
+		<ListComponent
 			className={`${badges.list} ${badges[block]} ${badges[fullContainer]}`}
-			//Animations
-				ref={ref}
-				variants={container}
-				initial="hidden"
-				animate={controls}
-				whileHover="hover"
-		>
+			ref={ref}
+			{...motionProps}>
 		{
 		list.map( ({ key, name, type }) => {
-			return ( 
-				<m.li 
-					key={name} 
+			const ItemComponent = (shouldReduceMotion || isLowEndDevice) ? 'li' : m.li
+			const itemMotionProps = (shouldReduceMotion || isLowEndDevice) ? {} : { variants: item }
+
+			return (
+				<ItemComponent
+					key={name}
 					className={`${badges.item} ${key}`}
-					//Animations
-					variants={item} >
+					{...itemMotionProps} >
 					<IconModule iconKey={key} iconType={type} color={color}/>
 					<span className={badges.title}>{name}</span>
-				</m.li> 
+				</ItemComponent>
 				)
-			}) 
+			})
 		}
-		</m.ul>
+		</ListComponent>
 	)
 }
 

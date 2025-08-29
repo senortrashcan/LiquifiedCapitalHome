@@ -1,11 +1,21 @@
-import FeaturedProject from '../../blocks/stake/featured'
+import dynamic from 'next/dynamic'
 
+// Lazy load the heavy FeaturedProject component
+const FeaturedProject = dynamic(() => import('../../blocks/stake/featured'), {
+	loading: () => (
+		<div style={{
+			height: '300px',
+			background: 'var(--background-color, #000)',
+			borderRadius: '8px',
+			margin: '20px 0'
+		}} />
+	),
+	ssr: true
+})
 
 // Section structure
 import Section 		from '../../structure/section';
 import Container 	from '../../structure/container';
-import Badges 		from '../../utils/badge.list.util'
-import Icon 		from '../../utils/icon.util'
 import SectionTitle from '../../blocks/section.title.block'
 
 import css 			from '../../../styles/sections/stake/featured.module.scss'
@@ -28,11 +38,12 @@ export default function FeaturedProjects() {
 				})
 				}
 			</Container>
-			<div className={css.bgContainer}>
+			{/* Simplified background for better performance */}
+			<div className={css.bgContainer} style={{ willChange: 'auto' }}>
 				<span className={css.orbitalBg}>
-					<span class={`${css.bgSection}`}><span className={`${css.bgInner} ${css.heroLeft} ${css.heroOrbital}`}></span></span>
-					<span class={`${css.bgSection}`}><span className={`${css.bgInner} ${css.heroCenter}`}></span></span>
-					<span class={`${css.bgSection}`}><span className={`${css.bgInner} ${css.heroRight} ${css.heroOrbital}`}></span></span>
+					<span className={`${css.bgSection}`}><span className={`${css.bgInner} ${css.heroLeft} ${css.heroOrbital}`}></span></span>
+					<span className={`${css.bgSection}`}><span className={`${css.bgInner} ${css.heroCenter}`}></span></span>
+					<span className={`${css.bgSection}`}><span className={`${css.bgInner} ${css.heroRight} ${css.heroOrbital}`}></span></span>
 				</span>
 				<span className={css.afterGlowBg}></span>
 			</div>
