@@ -64,8 +64,8 @@ export default function Hero() {
 					</p>					
 				</section>
 				<section>
-					<button	className={`button ${button.primary} leaveSite`}
-							onClick={ () => window.open("https://liquified.capital", "_blank") } >
+					<button	className={`button ${button.primary}`}
+							onClick={ () => window.location = '/stake' } >
 						{content.buttons.primary.title}
 					</button>
 					<button className={`button ${button.secondary}`}
